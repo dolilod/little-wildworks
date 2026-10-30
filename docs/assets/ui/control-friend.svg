@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="asset-title">
+<title id="asset-title">Friend control</title>
+<g fill="none" stroke="#243746" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M9 25C9 18 13 13 19 15L24 20L29 15C35 13 39 18 39 25V36C39 45 32 50 24 50C15 50 9 45 9 36Z" fill="#7C986A"/>
+<path d="M36 29C40 24 48 25 52 30C58 37 55 49 47 51C43 52 39 51 36 49" fill="#AED8CF"/>
+<path d="M18 31V33M29 31V33M45 35V37"/>
+</g>
+</svg>

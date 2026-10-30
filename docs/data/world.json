@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "units": "metres",
+  "axes": "+Y up; +Z character front",
+  "bounds": {
+    "x": [
+      -24,
+      24
+    ],
+    "z": [
+      -20,
+      20
+    ]
+  },
+  "playerSpawn": [
+    -17,
+    0,
+    10
+  ],
+  "camera": {
+    "type": "orthographic-follow",
+    "positionOffset": [
+      10,
+      13,
+      14
+    ],
+    "verticalSpanLandscape": 12,
+    "verticalSpanPortrait": 16,
+    "rotationControls": false,
+    "softFollow": true,
+    "obstructionFade": true,
+    "note": "Overview camera belongs only to asset inspection. Frame playable area and keep selected target visible on physical device."
+  },
+  "zones": [
+    {
+      "id": "meadow",
+      "label": "Tumble Meadow",
+      "texture": "assets/textures/meadow-tile.png",
+      "theme": "slides, folded leaves, ribbons"
+    },
+    {
+      "id": "pond",
+      "label": "Button Pond",
+      "texture": "assets/textures/pond-tile.png",
+      "theme": "ripples, ringing pebbles, stepping pads"
+    },
+    {
+      "id": "dusk",
+      "label": "Lantern Rise",
+      "texture": "assets/textures/dusk-tile.png",
+      "theme": "quiet shade, warm lamps, the moon picnic"
+    }
+  ],
+  "projects": [
+    {
+      "id": "leaf_slide",
+      "position": [
+        -12,
+        0,
+        5
+      ],
+      "element": "sprout",
+      "verb": "grow",
+      "prerequisites": [],
+      "result": "The shared leaf slide opens a short path toward the pond.",
+      "toyVariants": [
+        "gentle",
+        "bouncy"
+      ],
+      "playExperiments": [
+        "Land in the left moss ring",
+        "Try the right moss ring with your friend"
+      ],
+      "participationEventTemplate": "participate:leaf_slide:{friendId}",
+      "playEventTemplate": "play:leaf_slide:{friendId}"
+    },
+    {
+      "id": "lotus_steps",
+      "position": [
+        10,
+        0,
+        -2
+      ],
+      "element": "splash",
+      "verb": "float",
+      "prerequisites": [
+        "leaf_slide"
+      ],
+      "result": "Five pads form a safe visible crossing.",
+      "toyVariants": [
+        "low_song",
+        "high_song"
+      ],
+      "playExperiments": [
+        "Play a three-note low tune",
+        "Play the same path with the high chimes"
+      ],
+      "participationEventTemplate": "participate:lotus_steps:{friendId}",
+      "playEventTemplate": "play:lotus_steps:{friendId}"
+    },
+    {
+      "id": "pinwheel_canopy",
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "element": "gust",
+      "verb": "blow",
+      "prerequisites": [
+        "leaf_slide"
+      ],
+      "result": "The crown canopy spins; an authored path toward Lantern Rise becomes available.",
+      "toyVariants": [
+        "clockwise",
+        "counterclockwise"
+      ],
+      "playExperiments": [
+        "Point the wind at the first ribbon",
+        "Try the opposite direction together"
+      ],
+      "participationEventTemplate": "participate:pinwheel_canopy:{friendId}",
+      "playEventTemplate": "play:pinwheel_canopy:{friendId}"
+    },
+    {
+      "id": "lantern_picnic",
+      "position": [
+        -2,
+        0,
+        -10
+      ],
+      "element": "glimmer",
+      "verb": "light",
+      "prerequisites": [
+        "lotus_steps",
+        "pinwheel_canopy"
+      ],
+      "result": "The picnic lamps light and the finale can be invited.",
+      "toyVariants": [
+        "moon",
+        "star"
+      ],
+      "playExperiments": [
+        "Light the moon arrangement",
+        "Remix the lamps into a star"
+      ],
+      "participationEventTemplate": "participate:lantern_picnic:{friendId}",
+      "playEventTemplate": "play:lantern_picnic:{friendId}"
+    }
+  ],
+  "encounters": [
+    {
+      "creatureId": "tumbletuft",
+      "position": [
+        -16,
+        0,
+        8
+      ],
+      "availableAfter": []
+    },
+    {
+      "creatureId": "foldfern",
+      "position": [
+        -18,
+        0,
+        0
+      ],
+      "availableAfter": [
+        "leaf_slide"
+      ]
+    },
+    {
+      "creatureId": "puddleloop",
+      "position": [
+        5,
+        0,
+        -1
+      ],
+      "availableAfter": [
+        "leaf_slide"
+      ]
+    },
+    {
+      "creatureId": "siltbell",
+      "position": [
+        15,
+        0,
+        3
+      ],
+      "availableAfter": [
+        "lotus_steps"
+      ]
+    },
+    {
+      "creatureId": "whirli",
+      "position": [
+        -5,
+        0,
+        4
+      ],
+      "availableAfter": [
+        "leaf_slide"
+      ]
+    },
+    {
+      "creatureId": "kitefin",
+      "position": [
+        4,
+        0,
+        5
+      ],
+      "availableAfter": [
+        "pinwheel_canopy"
+      ]
+    },
+    {
+      "creatureId": "glintot",
+      "position": [
+        -6,
+        0,
+        -7
+      ],
+      "availableAfter": [
+        "lotus_steps",
+        "pinwheel_canopy"
+      ]
+    },
+    {
+      "creatureId": "hushbulb",
+      "position": [
+        3,
+        0,
+        -13
+      ],
+      "availableAfter": [
+        "lantern_picnic"
+      ]
+    }
+  ],
+  "finale": {
+    "id": "moon_picnic",
+    "requiresProjects": [
+      "leaf_slide",
+      "lotus_steps",
+      "pinwheel_canopy",
+      "lantern_picnic"
+    ],
+    "requiresAllCreatures": false,
+    "skippable": true,
+    "replayable": true,
+    "scriptSeconds": 45,
+    "description": "Choose a guest of honour and press Go at the bell to launch a visible four-project chain reaction: leaf unfolds, ripple carries a lamp, canopy turns, glow lifts the moon lantern. Gather every befriended creature and reveal the picnic. Replay with another guest.",
+    "playerInitiated": true,
+    "seatsRequired": 9
+  },
+  "note": "Positions match the scenery kit where possible. Navigation, unlock rules, ride motion and all gameplay still need integration and device testing. Never put a required encounter beyond its own locked path. Ground position hints must be projected onto walkable surfaces. Permanent completion and per-friend participation are separate; replaying a toy with a new friend awards their participation event without resetting world progress. Route barriers and shortcut colliders are a host-game task, not already present scenery behavior."
+}

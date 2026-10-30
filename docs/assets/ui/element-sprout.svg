@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="asset-title">
+<title id="asset-title">Sprout element</title>
+<g fill="none" stroke="#243746" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M32 54V32"/>
+<path d="M32 36C19 38 11 29 12 17C25 16 35 24 32 36Z" fill="#7C986A"/>
+<path d="M33 30C31 18 39 10 52 11C53 24 45 33 33 30Z" fill="#7C986A"/>
+<path d="M19 24L31 36M44 19L33 30"/>
+</g>
+</svg>

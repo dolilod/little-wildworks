@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="asset-title">
+<title id="asset-title">Gust element</title>
+<g fill="none" stroke="#243746" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M9 22H37C45 22 46 10 39 10C35 10 33 13 33 16"/>
+<path d="M9 32H48C57 32 57 20 50 20"/>
+<path d="M9 42H32C42 42 43 54 34 54C30 54 28 51 28 48"/>
+</g>
+</svg>

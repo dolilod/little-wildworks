@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="asset-title">
+<title id="asset-title">Memory journal item</title>
+<g fill="none" stroke="#243746" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M13 12H42L51 21V53H13Z" fill="#F6EEDC"/>
+<path d="M42 12V21H51M20 12V53"/>
+<path d="M34 27L37 34L44 36L37 39L34 46L31 39L24 36L31 34Z" fill="#E6B85C" stroke-width="3"/>
+</g>
+</svg>

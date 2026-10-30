@@ -1,0 +1,18 @@
+{
+  "name": "little-wildworks",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "node --test --test-concurrency=1 tests/",
+    "shot": "node scripts/dev-shot.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "playwright-core": "1.64.1",
+    "three": "0.180.0"
+  },
+  "private": true
+}

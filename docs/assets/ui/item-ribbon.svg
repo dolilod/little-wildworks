@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="asset-title">
+<title id="asset-title">Ribbon item</title>
+<g fill="none" stroke="#243746" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M26 32L18 53L28 49L34 55L38 34" fill="#D97B60"/>
+<path d="M32 31L43 51L44 42L54 44L40 27" fill="#D97B60"/>
+<path d="M29 28C19 11 10 12 10 22C10 31 22 34 29 30Z" fill="#E6B85C"/>
+<path d="M35 28C45 11 54 12 54 22C54 31 42 34 35 30Z" fill="#E6B85C"/>
+<rect x="27" y="23" width="10" height="12" rx="3" fill="#D97B60"/>
+</g>
+</svg>

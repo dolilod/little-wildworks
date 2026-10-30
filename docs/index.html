@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#243746">
+<meta name="description" content="The Little Wildworks: a small 3D island game about peculiar creatures, four toys and the first Moon Picnic.">
+<title>The Little Wildworks</title>
+<link rel="icon" href="assets/ui/item-seed.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js","three/addons/":"./vendor/three/addons/"}}</script>
+</head>
+<body>
+<div id="app">
+  <canvas id="scene" aria-label="The island, seen from above"></canvas>
+  <div id="bubbles" aria-live="polite"></div>
+  <div id="floaters" aria-hidden="true"></div>
+
+  <div id="hud" hidden>
+    <div class="hud-top">
+      <div id="goal" class="goal" role="status" aria-live="polite">
+        <img class="goal-icon" src="assets/ui/item-seed.svg" alt="">
+        <span class="goal-text">Find the little leafy creature</span>
+      </div>
+      <div class="hud-buttons">
+        <button id="btn-roster" class="hud-btn" type="button" aria-label="Friends">
+          <img src="assets/ui/control-friend.svg" alt=""><span class="hud-badge" hidden></span>
+        </button>
+        <button id="btn-book" class="hud-btn" type="button" aria-label="Memory book"><img src="assets/ui/item-memory.svg" alt=""></button>
+        <button id="btn-mute" class="hud-btn" type="button" aria-label="Sound off" aria-pressed="false">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#243746" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 25h9l13-11v36L21 39h-9z" fill="#F6EEDC"/><path class="wave" d="M42 24c4 4 4 12 0 16M47 18c8 8 8 20 0 28"/><path class="cross" d="M43 25l14 14M57 25L43 39"/></g></svg>
+        </button>
+        <button id="btn-pause" class="hud-btn" type="button" aria-label="Pause menu">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="#F6EEDC" stroke="#243746" stroke-width="4" stroke-linejoin="round"><rect x="17" y="14" width="11" height="36" rx="4"/><rect x="36" y="14" width="11" height="36" rx="4"/></g></svg>
+        </button>
+      </div>
+    </div>
+    <div id="save-chip" class="save-chip" hidden></div>
+    <div id="prompt" class="prompt" hidden><kbd>Space</kbd><img class="prompt-icon" src="assets/ui/control-interact.svg" alt=""><span class="prompt-text"></span></div>
+    <div id="keys-help" class="keys-help"><kbd>W A S D</kbd> or <kbd>arrows</kbd> to walk · <kbd>Space</kbd> to do things · <kbd>F</kbd> to switch friend</div>
+    <div id="edge-arrow" class="edge-arrow" hidden aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M6 20 L30 8 L24 20 L30 32 Z" fill="#E6B85C" stroke="#243746" stroke-width="3" stroke-linejoin="round"/></svg></div>
+    <div id="zone-banner" class="zone-banner" aria-live="polite"></div>
+  </div>
+
+  <div id="touch" hidden>
+    <div id="joy-zone" aria-label="Move pad: drag your thumb here">
+      <div class="joy-ghost" aria-hidden="true"></div>
+      <div id="joy-base" aria-hidden="true"><div id="joy-knob"></div></div>
+    </div>
+    <button id="btn-friend" class="touch-btn friend" type="button" aria-label="Switch friend">
+      <img class="friend-face" src="assets/ui/control-friend.svg" alt="">
+    </button>
+    <button id="btn-action" class="touch-btn action" type="button" aria-label="Action">
+      <img class="action-icon" src="assets/ui/control-interact.svg" alt="">
+      <span class="action-label">Wave</span>
+    </button>
+  </div>
+
+  <div id="title" class="screen title-screen">
+    <div class="title-card">
+      <img class="title-logo" src="assets/brand/title.svg" alt="The Little Wildworks">
+      <p class="tagline">Tiny creatures. Big ideas. Tonight: the first Moon Picnic.</p>
+      <div class="loading" id="loading"><div class="loading-bar"><span></span></div><p>Waking up the island...</p></div>
+      <div class="title-buttons" id="title-buttons" hidden>
+        <button id="btn-play" class="btn big primary" type="button">Play</button>
+        <button id="btn-newgame" class="btn" type="button" hidden>New game</button>
+        <button id="btn-credits" class="btn" type="button">Credits</button>
+      </div>
+      <p class="title-note" id="title-note"></p>
+    </div>
+  </div>
+
+  <div id="modal" class="modal-layer" hidden></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <div id="fail" class="screen fail" hidden>
+    <div class="title-card"><img class="title-logo" src="assets/brand/title.svg" alt="The Little Wildworks"><p id="fail-text"></p></div>
+  </div>
+  <noscript><div class="screen fail"><div class="title-card"><p>The Little Wildworks needs JavaScript to run.</p></div></div></noscript>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
